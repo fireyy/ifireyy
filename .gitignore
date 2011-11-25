@@ -3,6 +3,4 @@ Makefile
 
 .DS_Store
 
-content/twitter/index.php
-
 deploy
