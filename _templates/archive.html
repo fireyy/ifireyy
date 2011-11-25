@@ -1,0 +1,7 @@
+{% block container %}
+<div class="blog content">
+    {% for post in pager.posts %}
+    <h2><a href="{{content_url(post.slug)}}" target="_blank">{{post.title}}</a></h2>
+    {% endfor %}
+</div>
+{% endblock %}
