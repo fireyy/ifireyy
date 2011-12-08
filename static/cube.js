@@ -1,10 +1,9 @@
-
 (function($) {
     
     
     $.fn.cube = function() {
+	    
         return this.each(function() {
-            
             
             var $container = $("<div/>").addClass('cube-container');
             var $cube = $("<div/>").addClass('cube').appendTo($container);
@@ -19,8 +18,8 @@
             
             $(this).append($container);
             
-                        
         });
+
     }
     
     $(function() {
