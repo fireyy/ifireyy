@@ -1,7 +1,35 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<li class="about"><a href="/about.html">About</a><em>/</em></li><li class="tag"><a href="/tag/">Tags</a></li>
+{% if pager.pages > 1 %}
+    {% if pager.prev %}
+        {% if pager.prev == 1 %}
+        {% if pager.sub_folder == 'page' %}
+        <li class="prev"><a href="{{ content_url(pager.folder) }}">&laquo;</a></li>
+        {% else %}
+        <li class="prev"><a href="{{ content_url(pager.folder, pager.sub_folder) }}">&laquo;</a></li>
+        {% endif %}
+        {% else %}
+        <li class="prev"><a href="{{ content_url(pager.folder, pager.sub_folder, pager.prev) }}">&laquo;</a></li>
+        {% endif %}
+    {% else %}
+    {% endif %}
+    {% if pager.next %}
+    <li class="next"><a href="{{ content_url(pager.folder, pager.sub_folder, pager.next) }}">&raquo;</a></li>
+    {% else %}
+    {% endif %}
+{% endif %}
+{% endblock %}
+
 {% block container %}
 <div class="blog content">
     {% for post in pager.posts %}
-    <h2><a href="{{content_url(post.slug)}}" target="_blank">{{post.title}}</a></h2>
+    <h2><time datetime="{{post.date}}">{{post.date.strftime("%b %d")}}</time><a href="{{content_url(post.slug)}}">{{post.title}}</a></h2>
+    <div class="content">
+    	{{post.content}}
+    </div>
+    <hr />
     {% endfor %}
 </div>
 {% endblock %}
