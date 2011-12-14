@@ -1,6 +1,6 @@
 -------
 title: Phonegap 的使用感受以及一些问题
-date: 2001-12-08
+date: 2011-12-08
 folder: blog
 tags: phonegap, html5, css3, javascript
 -------

@@ -16,6 +16,10 @@ h1, h2, h3 {
     margin: 0 0 14px 0;
 }
 
+h2 a {
+	color:#222;
+}
+
 blockquote {
 	border-left: 3px solid #E5E5E5;
 	color: #666;
@@ -25,12 +29,8 @@ blockquote {
 
 pre {
 	background: white;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	border: 1px solid #CDCDCD;
-	-moz-box-shadow: 0 1px 0 white,0 1px 3px rgba(0, 0, 0, .1) inset;
-	-webkit-box-shadow: 0 1px 0 white,0 1px 3px rgba(0, 0, 0, .1) inset;
 	box-shadow: 0 1px 0 white,0 1px 3px rgba(0, 0, 0, .1) inset;
 	color: black;
 	font: 12px/1.5 Monaco,monospace;
@@ -77,8 +77,13 @@ em {
 }
 
 time {
-	color:#787878;
-	margin-right: 5px;
+	color:#fff;
+	margin-right: 10px;
+	background: #ccc;
+	padding: 0 5px;
+	border-radius: 4px;
+	font-size: 20px;
+	text-shadow: none;
 }
 
 #header {
@@ -96,6 +101,7 @@ time {
     margin: 0 auto;
 	max-width: 640px;
     padding: 0;
+    text-indent: 18px;
 }
 #nav li {
 	color:#333;
@@ -161,14 +167,8 @@ body.page #nav .about a,
 	padding:0 10px 0 12px;
 	background:#aaa;
 	color:#fff;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 	text-decoration:none;
-	-moz-border-radius-bottomright:4px;
-	-webkit-border-bottom-right-radius:4px;	
-	border-bottom-right-radius:4px;
-	-moz-border-radius-topright:4px;
-	-webkit-border-top-right-radius:4px;	
-	border-top-right-radius:4px;	
+	border-radius: 0 4px 4px 0;
 }
 
 .tags a:before{
@@ -192,12 +192,8 @@ body.page #nav .about a,
 	float:left;
 	width:4px;
 	height:4px;
-	-moz-border-radius:2px;
-	-webkit-border-radius:2px;
 	border-radius:2px;
 	background:#fff;
-	-moz-box-shadow:-1px -1px 2px #555;
-	-webkit-box-shadow:-1px -1px 2px #555;
 	box-shadow:-1px -1px 2px #555;
 }
 
@@ -209,19 +205,19 @@ hr {
     border: none;
     color: #333;
     text-align: center;
-    margin: 40px 0;
+    margin: 20px 0 60px;
 }
-hr:after {
-    content: "§";
+hr:before {
+	content: "\2026";
     display: inline-block;
     position: relative; 
-    top: 0;  
-    font-size: 1.5em;
-    padding: 0 0.25em;
+    font-family: Times, Serif;
+    font-size: 2.8em;
+    color:#aaa;
 }
 
 #footer {
-	color:#ccc;
+	color:#aaa;
 	font-size: 14px;
 	text-align: center;
 }
