@@ -1,0 +1,231 @@
+.Markdown p {
+    margin-top: 1.5rem;
+    font-size:17px
+}
+
+.Markdown li > a, p > a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--primary-6);
+    border-bottom:1px dotted var(--neutral-4)
+}
+
+.Markdown li > a:hover, p > a:hover {
+    border-bottom-color:var(--neutral-6)
+}
+
+.Markdown h2, .Markdown h3, .Markdown h4, .Markdown h5, .Markdown h6 {
+    position: relative;
+    margin-top:6rem
+}
+
+.Markdown h2 {
+    font-size:2.5rem
+}
+
+.Markdown h3 {
+    font-size:2rem
+}
+
+.Markdown h4 {
+    font-size:1.5rem
+}
+
+.Markdown h5 {
+    font-size:1.25rem
+}
+
+.Markdown h6 {
+    font-size:1rem
+}
+
+.Markdown pre {
+    background: none;
+}
+
+.Markdown pre > code {
+    margin-top: 1.5rem;
+    display: block;
+    background: #f7f7f7;
+    color: var(--foreground);
+    padding: 2rem;
+    border-radius: 3px;
+    line-height: 1.25;
+    font-size: 14px;
+    overflow-x: auto;
+    user-select:all
+}
+
+li > code, p > code {
+    border: 1px solid #dee2e6;
+    font-size: .75rem;
+    padding: 3px 10px;
+    border-radius: 3px;
+    white-space: nowrap;
+    font-weight: 600;
+    font-family: inherit;
+    -webkit-font-smoothing:antialiased
+}
+
+.Markdown ul {
+    margin-top:2rem
+}
+
+.Markdown ul li {
+    list-style: none;
+    margin-left: 1rem;
+    line-height:1.6
+}
+
+.Markdown ul li:before {
+    content: "•";
+    margin-right:.5rem
+}
+
+.Markdown .Heading {
+    padding-left: 2rem;
+    margin-left:-2rem
+}
+
+.Markdown .Anchor {
+    position: absolute;
+    opacity: 0;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    outline: none;
+    transition: all .15s cubic-bezier(.215, .61, .355, 1);
+    transform: translateX(2rem);
+    color:var(--neutral-11)
+}
+
+.Markdown .Heading:hover .Anchor {
+    opacity: .45;
+    transform:translateX(0)
+}
+
+.Markdown .Heading .Anchor:hover {
+    opacity: 1;
+    color:var(--neutral-12)
+}
+
+.Markdown .Image {
+    --image: url(https://apex-software.imgix.net/apex/site/backgrounds/1.jpeg?auto=format&q=60&w=1800);
+    --tint: hsla(0, 0%, 100%, 0.33);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(var(--tint), var(--tint)), var(--image);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 500px;
+    border-radius: 2px;
+    margin:2rem 0
+}
+
+.Markdown .Image > img {
+    max-width: 80%;
+    max-height: 80%;
+    box-shadow: 0 5px 25px -10px rgba(0, 0, 0, .25);
+    border-radius:3px
+}
+
+@media screen and (max-width: 700px) {
+    .Markdown .Image {
+        background-image: none;
+        height:auto
+    }
+
+    .Markdown .Image > img {
+        max-width:90%
+    }
+}
+
+.Markdown .Message {
+    margin: 25px 0;
+    padding: 25px;
+    background: #e7f5ff;
+    border: 1px solid #74c0fc;
+    border-radius: 3px;
+    color:#1c7ed6
+}
+
+.Markdown .Message p {
+    margin:0
+}
+
+.Markdown > hr {
+    margin: 5rem 0;
+    border: none;
+    border-bottom:1px dotted var(--neutral-4)
+}
+
+.Markdown details, .Question {
+    margin-top:2rem
+}
+
+.Markdown details summary, .Question summary {
+    user-select: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor:pointer
+}
+
+.Markdown details p, .Question p {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--neutral-7);
+    margin-left:1.5rem
+}
+
+.Markdown details summary::-webkit-details-marker, .Question summary::-webkit-details-marker {
+    display:none
+}
+
+.Markdown details summary, .Question summary {
+    outline:none
+}
+
+.Markdown details summary:before, .Question summary:before {
+    display: inline-block;
+    content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik05IDE4bDYtNi02LTYiLz48L3N2Zz4=");
+    margin-right: .5rem;
+    transition:transform .2s ease-out
+}
+
+.Markdown details[open] summary:before, .Question[open] summary:before {
+    transform:rotate(90deg)
+}
+
+
+.Markdown table {
+    margin: 0 auto;
+    font-weight: 200;
+    line-height: 3.5;
+    text-align: center;
+    border-collapse: collapse;
+    transform:translateX(-75px)
+}
+
+.Markdown table th {
+    padding: 20px 0;
+}
+
+.Markdown table td {
+    border-right: 1px solid var(--border);
+    padding: 0 30px;
+}
+
+.Markdown table td:last-child {
+    border-right: none;
+}
+
+@media screen and (max-width: 550px) {
+    .Markdown table {
+        transform: translateX(-50px);
+    }
+
+    .Markdown table td {
+        padding: 0 15px;
+    }
+}

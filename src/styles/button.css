@@ -1,0 +1,48 @@
+.Button {
+    --height: 2.63rem;
+    display: inline-block;
+    border: 1px solid var(--border);
+    text-transform: uppercase;
+    font-size: .625rem;
+    height: var(--height);
+    line-height: var(--height);
+    padding: 0 2.5rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    user-select: none;
+    text-decoration: none;
+    color: var(--foreground);
+    cursor: pointer;
+    outline: none;
+    border-radius:1px
+}
+
+.Button:hover {
+    border-color:var(--neutral-4)
+}
+
+.Button:focus {
+    box-shadow:var(--neutral-3) 0 0 0 3px
+}
+
+.Button:active {
+    transform:translateY(1px)
+}
+
+.Button.light {
+    color: var(--foreground);
+    background:var(--background)
+}
+
+.Button.dark, .Button.light {
+    border-color:var(--foreground)
+}
+
+.Button.dark {
+    color: var(--background);
+    background:var(--foreground)
+}
+
+.Button.dark:hover {
+    background:var(--neutral-9)
+}

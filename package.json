@@ -1,0 +1,36 @@
+{
+  "name": "ifireyy",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public -t",
+    "dev": "saber",
+    "build": "saber build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fireyy/ifireyy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fireyy/ifireyy/issues"
+  },
+  "homepage": "https://github.com/fireyy/ifireyy#readme",
+  "dependencies": {
+    "saber": "^0.11.4"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "gh-pages": "^2.1.1",
+    "postcss-import": "^12.0.1",
+    "prismjs": "^1.17.1",
+    "saber-plugin-feed": "^0.4.3",
+    "saber-plugin-prismjs": "^0.2.4",
+    "saber-plugin-query-posts": "^0.4.5"
+  }
+}

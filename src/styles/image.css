@@ -1,0 +1,48 @@
+.Image > img {
+    max-width:100%
+}
+
+.Image.shadow > img {
+    box-shadow: 0 5px 25px -10px rgba(0, 0, 0, .25);
+    border-radius:3px
+}
+
+.Image.desktop {
+    --image: url(https://apex-software.imgix.net/apex/site/backgrounds/1.jpeg?auto=format&q=60&w=1800);
+    --tint: hsla(0, 0%, 100%, 0.33);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(var(--tint), var(--tint)), var(--image);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 700px;
+    border-radius:2px
+}
+
+.Image.desktop > img {
+    max-height: 80%;
+    max-width:80%
+}
+
+@media screen and (max-width: 700px) {
+    .Image.desktop {
+        background-image: none;
+        height:auto
+    }
+
+    .Image.desktop > img {
+        max-width:90%
+    }
+}
+
+.Image.terminal > img {
+    max-width: 60%;
+    border-radius:6px
+}
+
+@media screen and (max-width: 700px) {
+    .Image.terminal > img {
+        max-width:90%
+    }
+}

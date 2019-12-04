@@ -1,0 +1,157 @@
+@import "./var.css";
+@import "./base.css";
+@import "./button.css";
+@import "./image.css";
+@import "./markdown.css";
+
+.container {
+  width: 700px;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  body,
+  html {
+    font-size: 14px;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1125px;
+  margin: 3rem auto 11rem;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  font-size: 0.8rem;
+  color: var(--neutral-5);
+}
+
+.Logo svg {
+  margin: 0 0.25rem;
+  width: 12px;
+}
+
+.Logo span::before {
+  content: "/ ";
+  font-size: 10px;
+  color: var(--neutral-2);
+  margin: 0 4px;
+}
+
+.Menu {
+  display: flex;
+  font-size: 0.8rem;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.Menu svg {
+  width: 12px;
+  margin-right: 0.12rem;
+}
+
+.Menu a {
+  display: flex;
+  align-items: center;
+  color: var(--primary-7);
+  text-decoration: none;
+  padding: 0 0.5rem;
+}
+
+.Menu a:hover {
+  background-color: var(--primary-0);
+}
+
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 10rem 0 5rem;
+  color: var(--neutral-5);
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:after {
+  display: inline-block;
+  content: "·";
+  margin: 0 0.25rem;
+}
+
+footer a:last-child:after {
+  display: none;
+}
+
+footer a:hover {
+  color: var(--foreground);
+}
+
+.Input {
+  --height: 2.62rem;
+  border-radius: 1px;
+  border: none;
+  font-size: 12px;
+  font-weight: 400;
+  height: var(--height);
+  padding: 0 1rem;
+  min-width: 250px;
+  outline: none;
+  box-shadow: var(--neutral-2) 0 0 0 1px;
+}
+
+.Input:focus {
+  box-shadow: var(--input-focus-shadow);
+}
+
+.Link.large,
+.Link.small {
+  display: inline-flex;
+  text-decoration: none;
+  color: #0044e4;
+  font-weight: 400;
+  font-size: 1.25rem;
+  align-items: center;
+  border-bottom: none;
+  position: relative;
+}
+
+.Link.large:after,
+.Link.small:after {
+  display: inline-block;
+  content: "→";
+  margin-left: 0.5rem;
+  font-weight: 300;
+  transition: transform 0.15s ease;
+}
+
+.Link.large:hover:after,
+.Link.small:hover:after {
+  transform: translateX(5px);
+}
+
+.Link.small {
+  font-size: 1rem;
+}
+
+.Link.small:after {
+  margin-left: 0.3rem;
+  font-size: 0.9rem;
+}
