@@ -3,8 +3,8 @@
     <Header :page="page" />
     <div class="container mb-30">
         <slot></slot>
+        <Footer />
     </div>
-    <Footer />
   </div>
 </template>
 
