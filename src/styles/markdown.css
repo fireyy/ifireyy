@@ -201,7 +201,7 @@ li > code, p > code {
 .Markdown table {
     margin: 0 auto;
     font-weight: 200;
-    line-height: 3.5;
+    line-height: 1.5;
     text-align: left;
     border-collapse: collapse;
 }
@@ -217,7 +217,7 @@ li > code, p > code {
 
 .Markdown table td {
     border-right: 1px solid var(--border);
-    padding: 0 30px;
+    padding: 20px 30px;
 }
 
 .Markdown table td:first-child {
@@ -235,6 +235,6 @@ li > code, p > code {
         padding: 10px 15px;
     }
     .Markdown table td {
-        padding: 0 15px;
+        padding: 10px 15px;
     }
 }
