@@ -202,13 +202,17 @@ li > code, p > code {
     margin: 0 auto;
     font-weight: 200;
     line-height: 3.5;
-    text-align: center;
+    text-align: left;
     border-collapse: collapse;
-    transform:translateX(-75px)
 }
 
 .Markdown table th {
-    padding: 20px 0;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.Markdown table th:first-child {
+    text-align: right;
 }
 
 .Markdown table td {
@@ -216,15 +220,20 @@ li > code, p > code {
     padding: 0 30px;
 }
 
+.Markdown table td:first-child {
+    font-weight: 400;
+    font-size: .9rem;
+    text-align: right;
+}
+
 .Markdown table td:last-child {
     border-right: none;
 }
 
 @media screen and (max-width: 550px) {
-    .Markdown table {
-        transform: translateX(-50px);
+    .Markdown table th {
+        padding: 10px 15px;
     }
-
     .Markdown table td {
         padding: 0 15px;
     }
