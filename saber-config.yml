@@ -19,3 +19,6 @@ plugins:
     options: 
       atomFeed: true
   - resolve: saber-plugin-prismjs
+  - resolve: saber-plugin-google-analytics
+    options:
+      trackId: UA-247725-1
