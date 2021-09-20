@@ -29,7 +29,7 @@
     "cssnano": "^4.1.10",
     "gh-pages": "^2.1.1",
     "postcss-import": "^12.0.1",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.25.0",
     "saber-plugin-feed": "^0.4.3",
     "saber-plugin-prismjs": "^0.2.4",
     "saber-plugin-query-posts": "^0.4.5"
