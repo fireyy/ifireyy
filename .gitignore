@@ -3,4 +3,3 @@ Makefile
 deploy
 .saber
 node_modules
-public
